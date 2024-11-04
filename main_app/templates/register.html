@@ -1,0 +1,17 @@
+<!-- main_app/templates/register.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Register</title>
+  </head>
+  <body>
+    <h2>Register</h2>
+    <form method="post" action="{% url 'register' %}">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Register</button>
+    </form>
+    <p>Sudah punya akun? <a href="{% url 'login' %}">Login di sini</a></p>
+    <a href="{% url 'index' %}">Kembali</a>
+  </body>
+</html>
